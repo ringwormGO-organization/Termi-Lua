@@ -8,8 +8,6 @@ Lua version of Termi
 
 # How to run:
 
-To start running Termi-Lua you need Lua language, so here is a guide
-
 ## Linux
 
 For Ubuntu/Debian
