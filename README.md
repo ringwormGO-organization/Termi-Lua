@@ -14,7 +14,7 @@ To start running Termi-Lua you need Lua language, so here is a guide
 
 ```
 sudo apt install lua5.4
-lua Main.lua`
+lua Main.lua
 ```
 
 ## Windows
