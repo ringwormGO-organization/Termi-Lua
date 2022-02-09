@@ -15,11 +15,13 @@ For Ubuntu/Debian
 $ sudo apt install lua5.4
 $ lua Main.lua
 ```
+
 CentOS/RHEL
 ```
 # yum install epel-release && yum install lua
 # lua Main.lua
 ```
+
 Fedora 22+
 
 ```
