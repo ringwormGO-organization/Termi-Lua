@@ -122,6 +122,8 @@ repeat
 				local Num1 = io.read()
 
 				io.write("Result: ", Num1*Num1,"\n")
+					
+			end
 
 		end
 	end
