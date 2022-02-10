@@ -1,7 +1,6 @@
 -- LUA 5.3 MINIMUM
--- TERMI-LUA VERSION 0.0.1
--- SURFACE CALCULATION COMMING SOON
-
+-- TERMI-LUA VERSION 0.0.2
+--------------------------
 
 print("\n")
 print("ooooooooooo                              ")
@@ -11,8 +10,8 @@ print("    888      888ooo8     888    888 888 888 888   888 ")
 print("    888      888    oo   888        888 888 888   888  ")
 print("   o888o    o888ooo8888 o888o      o888o888o888o o888o ")
 print("-------------------------------------------------------")
-print("		TYPE 'Help' TO SEE LIST OF ALL COMMAND        ")
-print("			(C) 2022 ringwormGO                   ")
+print("	TYPE 'Help' TO SEE ALL COMMANDS")
+print("		(C) 2022 ringwormGO                   ")
 print("-------------------------------------------------------")
 
 repeat
@@ -24,6 +23,7 @@ repeat
 		print("Help -- shows list of commands")
 		print("Opencalc -- opens a calculator")
 		print("OpenGeocalc -- opens a geometric calculator")
+		print("Exit -- exits Termi")
 
 	elseif input == "Opencalc" then
 
@@ -71,12 +71,12 @@ repeat
 
 
 	elseif input == "OpenGeocalc" then
-		print("Enter what function to do (EXT)")
+		print("Enter what function to do (EXT, SRF)")
 
 		GCalc = io.read()
 
 		if GCalc == "EXT" then
-			print("Enter what 2d Shape you want (SQR, TRI, REC)")
+			print("Enter what 2d shape you want (SQR, TRI, REC)")
 
 			Shape = io.read()
 
@@ -95,9 +95,8 @@ repeat
                                 print("Enter the lenght of all sides")
 
                                 local Num1 = io.read()
-				local Num2 = 4
 
-                                io.write("Combined size of all sides: ", Num1*Num2, "\n")
+                                io.write("Result: ", Num1*4, "\n")
 
 			elseif Shape == "REC" then
 
@@ -106,10 +105,25 @@ repeat
 				local Num1 = io.read()
 				local Num2 = io.read()
 
-				io.write("Combined size of all sides: ", Num1+Num2,"\n")
+				io.write("Result: ", Num1+Num2,"\n")
+
+			end
+
+
+		else if GCalc == "SRF" then
+			print("Enter what 2d shape you want (SQR)")
+
+			Shape2 = io.read()
+
+			if Shape2 == "SQR" then
+
+				print("Enter lenght of a side")
+
+				local Num1 = io.read()
+
+				io.write("Result: ", Num1*Num1,"\n")
 
 		end
-
 	end
 
 end
