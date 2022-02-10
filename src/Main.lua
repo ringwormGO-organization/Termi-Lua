@@ -111,7 +111,7 @@ repeat
 
 
 		else if GCalc == "SRF" then
-			print("Enter what 2d shape you want (SQR)")
+			print("Enter what 2d shape you want (SQR, REC)")
 
 			Shape2 = io.read()
 
@@ -122,7 +122,15 @@ repeat
 				local Num1 = io.read()
 
 				io.write("Result: ", Num1*Num1,"\n")
-					
+
+			elseif Shape2 == "REC" then
+				print("Enter two numbers")
+
+                        local Num1 = io.read()
+                        local Num2 = io.read()
+
+                        io.write("Result: ", Num1*Num2,"\n")
+
 			end
 
 		end
