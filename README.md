@@ -31,4 +31,11 @@ Fedora 22+
 
 ## Windows
 
+http://support.ptc.com/help/edge_microserver/r5.4.6/en/index.html#page/edge_microserver/c_ems_wsems_lua_running.html
+
 ## MacOS
+
+```
+brew install lua
+lua Main.lua
+```
