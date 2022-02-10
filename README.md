@@ -31,5 +31,4 @@ Fedora 22+
 
 ## Windows
 
-1. Download Lua
-2. Run Main.lua
+## MacOS
