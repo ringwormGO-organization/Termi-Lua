@@ -1,5 +1,5 @@
--- LUA 5.3 MINIMUM
--- TERMI-LUA VERSION 0.0.2
+-- LUA 5.1 MINIMUM
+-- TERMI-LUA VERSION 0.0.3
 --------------------------
 
 print("\n")
@@ -67,6 +67,9 @@ repeat
 
                         io.write("Result: ", Num1/Num2,"\n")
 
+				else
+					print("ERROR: COMMAND NOT FOUND")
+
                 end
 
 
@@ -92,11 +95,11 @@ repeat
 
 			elseif Shape == "SQR" then
 
-                                print("Enter the lenght of all sides")
+                print("Enter the lenght of all sides")
 
-                                local Num1 = io.read()
+                local Num1 = io.read()
 
-                                io.write("Result: ", Num1*4, "\n")
+                io.write("Result: ", Num1*4, "\n")
 
 			elseif Shape == "REC" then
 
@@ -106,6 +109,9 @@ repeat
 				local Num2 = io.read()
 
 				io.write("Result: ", Num1+Num2,"\n")
+
+			else
+				print("ERROR: COMMAND NOT FOUND")
 
 			end
 
@@ -130,8 +136,13 @@ repeat
                         local Num2 = io.read()
 
                         io.write("Result: ", Num1*Num2,"\n")
+			else
+				print("ERROR: COMMAND NOT FOUND")
 
 			end
+
+		else
+			print("ERROR: COMMAND NOT FOUND")
 
 		end
 	end
