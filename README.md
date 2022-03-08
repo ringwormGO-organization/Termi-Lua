@@ -3,7 +3,7 @@ Lua version of Termi
 
 # Requirements (Minimum)
 
-1. Lua 5.3
+1. Lua 5.1
 2. 5 KB of memory
 
 # How to run:
@@ -11,7 +11,7 @@ Lua version of Termi
 ## Linux
 
 For Ubuntu/Debian
-```
+```shell
 $ sudo apt install lua5.4
 $ lua Main.lua
 ```
