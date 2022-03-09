@@ -3,7 +3,7 @@ Lua version of Termi
 
 ## Build & Run
 ### Required software:
-- Lua
+- Lua (minium Lua 5.1)
   - Install with ```sudo apt-get install lua5.4``` if not already installed on GNU/Linux machine.
 - Git
   - Install with ```sudo apt-get install git``` if not already installed on GNU/Linux machine.
