@@ -1,6 +1,11 @@
--- LUA 5.1 MINIMUM
--- TERMI-LUA VERSION 0.0.5
---------------------------
+--
+-- @author Stjepan Bilić Matišić
+-- PROJECT: Termi-Lua
+-- LICENSE: BSD-3-Clause-License
+-- DESCRIPTION: Main file for Termi-Lua
+--
+
+ver = "0.0.5"
 
 print("\n")
 print("ooooooooooo                              ")
@@ -14,13 +19,9 @@ print("	 Type '!help', '!credits', '!exit'")
 print("-------------------------------------------------------")
 
 repeat
-
-	
 	io.write("Termi> ")
-	
+	 
 	input = io.read()
-
-	ver = "0.0.5"
 
 	if input == "!help" then
 		dofile("functions/help.lua")
