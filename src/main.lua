@@ -5,7 +5,7 @@
 -- DESCRIPTION: Main file for Termi-Lua
 --
 
-ver = "0.0.5"
+local ver = "0.0.5"
 
 print("\n")
 print("ooooooooooo                              ")
@@ -20,8 +20,8 @@ print("-------------------------------------------------------")
 
 repeat
 	io.write("Termi> ")
-	 
-	input = io.read()
+
+	local input = io.read()
 
 	if input == "!help" then
 		dofile("functions/help.lua")
@@ -31,6 +31,9 @@ repeat
 
 	elseif input == "!ver" then
 		print(ver)
+
+	elseif input == "!clear" or input == "!cls" then
+		io.write("\027[H\027[2J")
 
 	elseif input == "createf" then
 		dofile("functions/createf.lua")
@@ -49,8 +52,12 @@ repeat
 
 	elseif input == "OpenGeocalc" then
 		dofile("functions/Geocalc.lua")
+	
+	elseif input.len(0) then --enter
+		--nothing
 
 	else
+		print("Invalid command!")
 
 	end
 

@@ -71,3 +71,5 @@ print("Enter what function to do (EXT, SRF)")
             print("ERROR: COMMAND NOT FOUND")
 
         end
+    end
+end
