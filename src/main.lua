@@ -1,9 +1,9 @@
---
--- @author Stjepan Bilić Matišić
--- PROJECT: Termi-Lua
--- LICENSE: BSD-3-Clause-License
--- DESCRIPTION: Main file for Termi-Lua
---
+---
+--- @author Stjepan Bilić Matišić
+--- @PROJECT: Termi-Lua
+--- @LICENSE: BSD-3-Clause-License
+--- @DESCRIPTION: Main file for Termi-Lua
+---
 
 local ver = "0.0.5"
 
@@ -52,9 +52,9 @@ repeat
 
 	elseif input == "OpenGeocalc" then
 		dofile("functions/Geocalc.lua")
-	
-	elseif input.len(0) then --enter
-		--nothing
+
+	elseif #input == 0 then
+		-- do nothing
 
 	else
 		print("Invalid command!")

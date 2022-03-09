@@ -1,9 +1,9 @@
---
--- @author Stjepan Bilić Matišić
--- PROJECT: Termi-Lua
--- LICENSE: BSD-3-Clause-License
--- DESCRIPTION: Geo caluclator file for Termi Lua
---
+---
+--- @author Stjepan Bilić Matišić
+--- @PROJECT: Termi-Lua
+--- @LICENSE: BSD-3-Clause-License
+--- @DESCRIPTION: Geo caluclator file for Termi Lua
+---
 
 print("Enter what function to do (EXT, SRF)")
 
