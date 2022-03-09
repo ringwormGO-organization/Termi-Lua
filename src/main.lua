@@ -53,8 +53,8 @@ repeat
 	elseif input == "OpenGeocalc" then
 		dofile("functions/Geocalc.lua")
 
-	elseif #input == 0 then
-		-- do nothing
+	elseif #input == 0 then --- enter
+		--- do nothing
 
 	else
 		print("Invalid command!")
