@@ -5,7 +5,9 @@
 --- @DESCRIPTION: Main file for Termi-Lua
 ---
 
-local ver = "0.0.5"
+-- LUA 5.1 MINIMUM
+-- TERMI-LUA VERSION 0.0.6
+--------------------------
 
 print("\n")
 print("ooooooooooo                              ")
@@ -19,9 +21,13 @@ print("	 Type '!help', '!credits', '!exit'")
 print("-------------------------------------------------------")
 
 repeat
-	io.write("Termi> ")
 
-	local input = io.read()
+	ver = "0.0.6"
+	
+	io.write("Termi> ")
+	
+	input = io.read()
+
 
 	if input == "!help" then
 		dofile("functions/help.lua")
@@ -32,13 +38,14 @@ repeat
 	elseif input == "!ver" then
 		print(ver)
 
-	elseif input == "!clear" or input == "!cls" then
-		io.write("\027[H\027[2J")
+	elseif input == "sysinfo" then
+		dofile("functions/sysinfo.lua")
 
-	elseif input == "createf" then
+	elseif input == "writefile" then
 		dofile("functions/createf.lua")
 
-	elseif input == "openf" then
+	elseif input == "openfile" then
+		dofile("functions/openf.lua")
 
 	elseif input == "mkdir" then
 		dofile("functions/mkdir.lua")
@@ -53,11 +60,7 @@ repeat
 	elseif input == "OpenGeocalc" then
 		dofile("functions/Geocalc.lua")
 
-	elseif #input == 0 then --- enter
-		--- do nothing
-
 	else
-		print("Invalid command!")
 
 	end
 
