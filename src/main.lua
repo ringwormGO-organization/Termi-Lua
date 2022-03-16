@@ -60,8 +60,11 @@ repeat
 	elseif input == "OpenGeocalc" then
 		dofile("functions/Geocalc.lua")
 
-	else
+	elseif #input == 0 then
+		--- do nothing
 
+	else
+		print("Invalid command!")
 	end
 
 until tostring(input) == "!exit"
