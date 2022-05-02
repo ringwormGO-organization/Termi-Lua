@@ -1,26 +1,19 @@
 ---
 --- @author Stjepan Bilić Matišić
+--- @author Andrej Bartulin
 --- PROJECT: Termi-Lua
 --- LICENSE: BSD-3-Clause-License
 --- DESCRIPTION: Help file for Termi Lua
 ---
 
 print("COMMANDS THAT START WITH ! :")
-print("	!help -- shows list of commands")
-print("	!credits -- prints out credits")
-print("	!ver -- prints out version of termi")
-print(" !termi -- prints out info about Termi")
-print("	!exit -- exits Termi")
+print("\thelp -- shows list of commands")
+print("\tcredits -- prints out credits")
+print("\texit -- exits Termi")
 print("Calculator commands :")
-print("	Opencalc -- opens a calculator")
-print("	OpenGeocalc -- opens a geometric calculator")
+print("\tcalc -- opens a calculator")
+print("\tgeocalc -- opens a geometric calculator")
 print("Filesys commands : // WORK IN PROGRESS")
-print("	writefile -- creates a file")
-print("	openfile -- opens a file")
-print("	cd -- cds into a direcotry")
-print("	rm -- removes a file/directory")
-print("	mkdir -- creates a directory")
-print(" list -- lists files in a directory")
-print("System Commands :")
-print(" sysinfo")
-print("|-------------------------------------------|")
+print("\tcreatef -- create a file")
+print("\trm -- removes a file/directory")
+print("\tmkdir -- creates a directory")
