@@ -7,7 +7,7 @@
 ---
 
 -- LUA 5.1 MINIMUM
--- TERMI-LUA VERSION 0.0.7
+-- TERMI-LUA VERSION 0.0.6
 --------------------------
 
 --- Return how many elements table (list) has
@@ -42,7 +42,7 @@ print("    888      888    88  oo oooooo  oo ooo oooo   oooo  ")
 print("    888      888ooo8     888    888 888 888 888   888 ")
 print("    888      888    oo   888        888 888 888   888  ")
 print("   o888o    o888ooo8888 o888o      o888o888o888o o888o ")
-print("                       0.0.7                           ")
+print("                       0.0.6                           ")
 print("-------------------------------------------------------")
 
 local elements = Length(commands)
@@ -73,7 +73,7 @@ repeat
 	elseif input == "exit" then
 		break
 
-	elseif #input == 0 then
+	elseif tonumber(input) == nil then
 		--- do nothing
 
 	else
