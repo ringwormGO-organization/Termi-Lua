@@ -13,3 +13,16 @@ Lua version of Termi
 ```sh
 $ cd src && lua main.lua
 ```
+
+## Advantages and cons over Termi's C++ version
+### Advantages
+1. Less resources intensive
+2. Easier to port
+
+### Cons
+1. Less commands
+2. Slower development
+
+### Advantages/Cons
+*it can be for someone advantages or cons for other*
+1. Does not have own terminal window
