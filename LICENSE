@@ -1,29 +1,69 @@
-BSD 3-Clause License
 
-Copyright (c) 2022, ringwormGO
-All rights reserved.
+-----------------------------------------------
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+ringwormGO General License 1.0 | (RGL) 2022
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
+-----------------------------------------------
 
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
+0. PREFACE >>
 
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
+This is the first version of the ringwormGO General License,
+ment to be used for all ringwormGO projects / products.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+In this document term RGL, ringwormGO License & ringwormGO General
+License are used.
+
+This license is ment to be used for ringwormGO projects and/or "Outsider" projects.
+
+For more information visit -> https://github.com/ringwormGO-organization/Docs/RGL
+
+--------------------------------------------------------------------------
+
+In case this license is used here are terms & conditions that MUST be
+followed. If these terms are not followed ringwormGO (and "Outsider" projects) will
+contact the project main developer(s).
+
+1. Terms & Conditions
+
+If you download the source code from a ringwormGO project and that project uses RGL 1.0,
+here are some of the rules that you MUST respect / follow.
+
+     [1]. Copying of the source code
+
+     Copying the code is allowed AS LONG as you credit the
+     ringwormGO & provide a link to the source code.
+
+     [2]. Redistributing the source code
+
+     You are NOT allowed to reditribute the source code,
+     unless you have a permision form all of the ringwormGO
+     developers.
+
+     But if a project is archived, for more than 1 year,
+     you can redistribute the source code, but you have
+     to credit the ringwormGO.
+
+     [3]. Using ringwormGO source code for personal projects
+
+     As already defined in [1] you are free to use the source
+     code as long as you credit ringwormGO.
+
+
+2. "Outsider" projects
+
+   "Outsider" project referes to projects that use RGL, are made by ringwormGO devs
+   or generaly projects that use RGL.
+
+   For more info on "Outsider" projects visit ::
+
+       https://github.com/ringwormGO-organization/Docs/Outsider
+
+
+   All of the rules already mentioned are same for "Outsider" projects.
+
+3. Defining the term "Source Code" >>
+
+The term "Source Code" referes to code used on ringwormGO projects*
+
+* code that is borrowed / used from another project falls under that
+  projects license.
