@@ -2,7 +2,7 @@
 --- @author Stjepan Bilić Matišić
 --- @author Andrej Bartulin
 --- @PROJECT: Termi-Lua
---- @LICENSE: BSD-3-Clause-License
+--- @LICENSE: ringwormGO General License 1.0 | (RGL) 2022
 --- @DESCRIPTION: Caluclator file for Termi Lua
 ---
 

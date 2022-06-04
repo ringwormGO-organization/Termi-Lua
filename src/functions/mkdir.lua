@@ -1,7 +1,7 @@
 ---
 --- @author Stjepan Bilić Matišić
 --- @PROJECT: Termi-Lua
---- @LICENSE: BSD-3-Clause-License
+--- @LICENSE: ringwormGO General License 1.0 | (RGL) 2022
 --- @DESCRIPTION: File to crate new folder for Termi Lua
 ---
 
