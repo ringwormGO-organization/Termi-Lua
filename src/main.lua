@@ -52,4 +52,4 @@ repeat
 		print("Invalid command!")
 	end
 
-until tostring(input) == "!exit"
+until tostring(input) == "exit"
