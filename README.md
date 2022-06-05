@@ -9,7 +9,7 @@ Lua version of Termi
   - Install with ```sudo apt-get install git``` if not already installed on GNU/Linux machine.
 
 ### Build & Run - Windows & Linux
-- Open terminal (on Windows ```cmd``` because it is support ```&&```) in root directory of repo and type:
+- Open terminal (on Windows ```cmd``` because it support ```&&```) in root directory of repo and type:
 ```sh
 $ cd src && lua main.lua
 ```
