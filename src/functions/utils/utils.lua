@@ -31,12 +31,14 @@ function util.Value(tab, val)
     return false
 end
 
-util.Commands = {"credits", "exit", "calc", "geocalc", "createf", "geocalc", "mkdir", "rm"}
+util.Commands = {"credits", "exit", "calc", "geocalc", "createf", "geocalc", "mkdir", "rm", "whoami"}
 local elements = util.Length(util.Commands)
 
 --- Print all commands in table
 --- @return boolean
 function util.Print_commands()
+    table.sort(util.Commands)
+
     for i = 1, elements, 1 do
         io.write(" ")
         io.write(util.Commands[i])
