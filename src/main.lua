@@ -35,9 +35,11 @@ repeat
 
 	if util.Value(util.Commands, tostring(input)) and input ~= "exit" then
 		dofile(path)
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
 	elseif input == "help" then
 		dofile("help.lua")
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
 	elseif input == "clear" or input == "cls" then
 		io.write("\027[H\027[2J")
@@ -50,6 +52,7 @@ repeat
 
 	else
 		print("Invalid command!")
+		print("\27[31m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Not successfully executed!\27[0m")
 	end
 
 until tostring(input) == "exit"
