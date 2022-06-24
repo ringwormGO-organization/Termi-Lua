@@ -7,11 +7,10 @@
 ---
 
 -- LUA 5.1 MINIMUM
--- TERMI-LUA VERSION 0.1.0
+-- TERMI-LUA VERSION 0.0.8
 --------------------------
 
 local util = require("functions.utils.utils")
-local os = require("functions.utils.os")
 
 print("\n")
 print("ooooooooooo                              ")
@@ -20,13 +19,11 @@ print("    888      888    88  oo oooooo  oo ooo oooo   oooo  ")
 print("    888      888ooo8     888    888 888 888 888   888 ")
 print("    888      888    oo   888        888 888 888   888  ")
 print("   o888o    o888ooo8888 o888o      o888o888o888o o888o ")
-print("                       0.1.0                           ")
+print("                       0.0.8                           ")
 print("-------------------------------------------------------")
 
 io.write(" help ")
 util.Print_commands()
-
-local os_name, arch_name = os.get_os_name()
 
 repeat
 	io.write("Termi> ")
@@ -38,25 +35,11 @@ repeat
 
 	if util.Value(util.Commands, tostring(input)) and input ~= "exit" then
 		dofile(path)
-
-		if os_name ~= "Windows" then
-			print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
-		else
-			os.execute("color 02")
-			print("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!")
-			os.execute("color 07")
-		end
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
 	elseif input == "help" then
 		dofile("help.lua")
-
-		if os_name ~= "Windows" then
-			print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
-		else
-			os.execute("color 02")
-			print("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!")
-			os.execute("color 07")
-		end
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
 	elseif input == "clear" or input == "cls" then
 		io.write("\027[H\027[2J")
@@ -69,14 +52,7 @@ repeat
 
 	else
 		print("Invalid command!")
-		
-		if os_name ~= "Windows" then
-			print("\27[31m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
-		else
-			os.execute("color 04")
-			print("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!")
-			os.execute("color 07")
-		end
+		print("\27[31m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Not successfully executed!\27[0m")
 	end
 
 until tostring(input) == "exit"

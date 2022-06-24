@@ -13,8 +13,6 @@ Lua version of Termi
 ```sh
 $ cd src && lua main.lua
 ```
-### Information for porting
-- It is recommended to support ANSI characters for colored text!
 
 ## External dependencies
 - https://github.com/bluebird75/lua_get_os_name
