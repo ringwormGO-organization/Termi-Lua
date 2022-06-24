@@ -7,15 +7,14 @@ Lua version of Termi
   - Install with ```sudo apt-get install lua5.4``` if not already installed on GNU/Linux machine, Debian based.
 - Git
   - Install with ```sudo apt-get install git``` if not already installed on GNU/Linux machine, Debian based.
+- ANSI supported terminal
+  - You can use Termi-Lua without ANSI characters but then colors are unavailable; warning for Windows users, use Windows Terminal. 
 
 ### Build & Run - Windows & Linux
 - Open terminal (on Windows ```cmd``` because it support ```&&```) in root directory of repo and type:
 ```sh
 $ cd src && lua main.lua
 ```
-
-## External dependencies
-- https://github.com/bluebird75/lua_get_os_name
 
 ## Advantages and cons over Termi's C++ version
 ### Advantages
