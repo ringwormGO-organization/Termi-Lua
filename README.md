@@ -16,6 +16,10 @@ Lua version of Termi
 $ cd src && lua main.lua
 ```
 
+## Add new command
+1. In `functions` folder create new file which is called same as command name
+2. Open `utils.lua` and in `Commands` table add name of command (don't worry about alphabetical order, Termi-Lua will sort it)
+
 ## Advantages and cons over Termi's C++ version
 ### Advantages
 1. Less resources intensive
