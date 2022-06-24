@@ -31,7 +31,7 @@ function util.Value(tab, val)
     return false
 end
 
-util.Commands = {"credits", "exit", "calc", "geocalc", "createf", "geocalc", "mkdir", "rm", "whoami"}
+util.Commands = {"base64", "credits", "exit", "calc", "geocalc", "createf", "geocalc", "mkdir", "rm", "whoami"}
 local elements = util.Length(util.Commands)
 
 --- Print all commands in table
