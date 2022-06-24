@@ -13,6 +13,8 @@ Lua version of Termi
 ```sh
 $ cd src && lua main.lua
 ```
+### Information for porting
+- It is recommended to support ANSI characters for colored text!
 
 ## Advantages and cons over Termi's C++ version
 ### Advantages
