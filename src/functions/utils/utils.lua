@@ -31,8 +31,21 @@ function util.Value(tab, val)
     return false
 end
 
-util.Commands = {"base64", "credits", "exit", "calc", "geocalc", "createf", "geocalc", "mkdir", "rm", "whoami"}
+util.Commands = {"base64", "credits", "exit", "calc", "geocalc", "createf", "mkdir", "rm", "whoami"}
 local elements = util.Length(util.Commands)
+
+--- Split string into the table (list)
+--- @param s string
+--- @param delimiter string
+--- @return table
+
+function util.Split(s, delimiter)
+    local result = {};
+    for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+        table.insert(result, match);
+    end
+    return result;
+end
 
 --- Print all commands in table
 --- @return boolean

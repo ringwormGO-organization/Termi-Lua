@@ -6,46 +6,45 @@
 --- @DESCRIPTION: Caluclator file for Termi Lua
 ---
 
+local calc = {}
+
 --- Return first or second number
 --- @param number integer
 --- @return integer
 function Get(number)
-        if number ==  1 then
-                return tonumber(tostring(io.read()))
+	if number ==  1 then
+			return tonumber(tostring(io.read()))
 
-        elseif number == 2 then
-                return tonumber(tostring(io.read()))
-        end
+	elseif number == 2 then
+			return tonumber(tostring(io.read()))
+	end
 end
 
-print("Enter what function to do (+, -, *, /)")
+function calc.Run()
+	print("Enter what function to do (+, -, *, /)")
 
-Calc = io.read()
+	Calc = io.read()
 
-if Calc == "+" then
-        print("Enter two numbers")
+	if Calc == "+" then
+		print("Enter two numbers")
+		io.write("Result: ", Get(1)+Get(2),"\n")
 
-        io.write("Result: ", Get(1)+Get(2),"\n")
+	elseif Calc == "-" then
+		print("Enter two numbers")
+		io.write("Result: ", Get(1)-Get(2),"\n")
 
-elseif Calc == "-" then
+	elseif Calc == "*" then
+		print("Enter two numbers")
+		io.write("Result: ", Get(1)*Get(2),"\n")
 
-        print("Enter two numbers")
+	elseif Calc == "/" then
+		print("Enter two numbers")
+		io.write("Result: ", Get(1)/Get(2),"\n")
 
-        io.write("Result: ", Get(1)-Get(2),"\n")
+	else
+		print("ERROR: COMMAND NOT FOUND")
 
-elseif Calc == "*" then
-
-        print("Enter two numbers")
-
-        io.write("Result: ", Get(1)*Get(2),"\n")
-
-elseif Calc == "/" then
-
-        print("Enter two numbers")
-
-        io.write("Result: ", Get(1)/Get(2),"\n")
-
-else
-        print("ERROR: COMMAND NOT FOUND")
-
+	end
 end
+
+return calc

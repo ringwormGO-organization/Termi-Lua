@@ -5,6 +5,16 @@
 --- @DESCRIPTION: File to crate new folder for Termi Lua
 ---
 
-io.write("> ")
-dirname = io.read()
-os.execute("mkdir " .. dirname)
+local mkdir = {}
+
+local util = require("functions.utils.utils")
+
+function mkdir.Run(arg)
+    for i = 2, util.Length(arg), 1 do
+        local dirname = arg[i]
+        os.execute("mkdir " .. dirname)
+    end
+
+end
+
+return mkdir

@@ -2,8 +2,10 @@
 --- @author Stack Overflow (https://stackoverflow.com/questions/34618946/lua-base64-encode)
 --- @PROJECT: Termi-Lua
 --- @LICENSE: ringwormGO General License 1.0 | (RGL) 2022
---- @DESCRIPTION: Caluclator file for Termi Lua
+--- @DESCRIPTION: Base64 encoder & decoder for Termi-Lua
 ---
+
+local base64 = {}
 
 local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/' -- You will need this for encoding/decoding
 
@@ -39,16 +41,14 @@ function Decode(data)
     end))
 end
 
-print("Enter if you want encode or decode: [-e - encode; -d - decode]")
-local encode_or_decode = io.read()
-
-print("Enter what you want to encode or decode: ")
-local input = io.read()
-
-if encode_or_decode == '-e' then
-    print("Encoded: " .. Encode(input))
-elseif encode_or_decode == '-d' then
-    print("Decoded: " .. Decode(input))
-else
-    print("ERROR: COMMAND NOT FOUND")
+function base64.Run(arg)
+    if arg[2] == '-e' then
+        print("Encoded: " .. Encode(arg[3]))
+    elseif arg[2] == '-d' then
+        print("Decoded: " .. Decode(arg[3]))
+    else
+        print("ERROR: COMMAND NOT FOUND")
+    end
 end
+
+return base64

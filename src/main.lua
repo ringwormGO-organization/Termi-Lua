@@ -7,7 +7,7 @@
 ---
 
 -- LUA 5.1 MINIMUM
--- TERMI-LUA VERSION 0.1.0
+-- TERMI-LUA VERSION 0.1.1
 --------------------------
 
 local util = require("functions.utils.utils")
@@ -19,7 +19,7 @@ print("    888      888    88  oo oooooo  oo ooo oooo   oooo  ")
 print("    888      888ooo8     888    888 888 888 888   888 ")
 print("    888      888    oo   888        888 888 888   888  ")
 print("   o888o    o888ooo8888 o888o      o888o888o888o o888o ")
-print("                       0.1.0                           ")
+print("                       0.1.1                           ")
 print("-------------------------------------------------------")
 
 io.write(" help ")
@@ -28,17 +28,30 @@ util.Print_commands()
 repeat
 	io.write("Termi> ")
 	
-	local path = "functions/"
+	local path = "functions."
 	local input = io.read()
+	local arg = util.Split(input, " ")
 
-	path = path .. tostring(input) .. ".lua"
+	path = path .. arg[1]
 
-	if util.Value(util.Commands, tostring(input)) and input ~= "exit" then
-		dofile(path)
+	if util.Value(util.Commands, arg[1]) and input ~= "exit" then
+		local command = require(path)
+		command.Run(arg)
 		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
+	elseif input == "whoami" then
+		local username = os.getenv('USERNAME');
+		print(username);
+
 	elseif input == "help" then
-		dofile("help.lua")
+		print("HELP: ")
+		util.Print_commands()
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
+
+	elseif input == "credits" then
+		print("* @author(s): StjepanBM1, Andrej123456789")
+		print("* PROJECT: Termi (Lua version)")
+		print("* Licnese: ringwormGO General License 1.0 | (RGL) 2022")
 		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
 	elseif input == "clear" or input == "cls" then

@@ -5,8 +5,15 @@
 --- @DESCRIPTION: File to create new files for Termi Lua
 ---
 
-io.write("> ")
-openf = io.read()
+local createf = {}
 
-file = io.open(openf,"w")
-file:close()
+local util = require("functions.utils.utils")
+
+function createf.Run(arg)
+    for i = 2, util.Length(arg), 1 do
+        local openf = arg[i]
+        local file = io.open(openf,"w")
+    end
+end
+
+return createf
