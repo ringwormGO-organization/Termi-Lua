@@ -19,7 +19,7 @@ print("    888      888    88  oo oooooo  oo ooo oooo   oooo  ")
 print("    888      888ooo8     888    888 888 888 888   888 ")
 print("    888      888    oo   888        888 888 888   888  ")
 print("   o888o    o888ooo8888 o888o      o888o888o888o o888o ")
-print("                       0.1.1                           ")
+print("                       0.1.2                           ")
 print("-------------------------------------------------------")
 
 io.write(" help ")
