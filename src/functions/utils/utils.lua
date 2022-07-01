@@ -31,7 +31,7 @@ function util.Value(tab, val)
     return false
 end
 
-util.Commands = {"base64", "credits", "exit", "echo", "calc", "geocalc", "createf", "mkdir", "rm", "whoami"}
+util.Commands = {"base64", "credits", "exit", "echo", "find", "list", "calc", "geocalc", "createf", "mkdir", "rm", "whoami"}
 local elements = util.Length(util.Commands)
 
 --- Split string into the table (list)
