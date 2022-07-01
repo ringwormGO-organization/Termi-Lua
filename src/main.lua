@@ -43,6 +43,10 @@ repeat
 		local username = os.getenv('USERNAME');
 		print(username);
 
+	elseif input == "date" then
+		local time = os.date()
+		print(time)
+
 	elseif input == "help" then
 		print("HELP: ")
 		util.Print_commands()
