@@ -19,7 +19,7 @@ $ cd src && lua main.lua
 ## Advantages and cons over Termi's C++ version
 ### Advantages
 1. Less resources intensive
-2. Easier to port
+2. Easier to port (filesys commands might be broken)
 
 ### Cons
 1. Less commands
