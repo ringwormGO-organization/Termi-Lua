@@ -8,7 +8,7 @@ Lua version of Termi
 - Git
   - Install with ```sudo apt-get install git``` if not already installed on GNU/Linux machine, Debian based.
 - ANSI supported terminal
-  - You can use Termi-Lua without ANSI characters but then colors are unavailable; warning for Windows users, use Windows Terminal. 
+  - You can use Termi-Lua without ANSI characters but then colors are unavailable; warning for Windows users, use Windows Terminal if you can.
 
 ### Build & Run - Windows & Linux
 - Open terminal (on Windows ```cmd``` because it support ```&&```) in root directory of repo and type:
