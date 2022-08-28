@@ -7,7 +7,7 @@
 ---
 
 -- LUA 5.1 MINIMUM
--- TERMI-LUA VERSION 0.1.5
+-- TERMI-LUA VERSION 1.0.0
 --------------------------
 
 local util = require("functions.utils.utils")
@@ -19,7 +19,7 @@ print("    888      888    88  oo oooooo  oo ooo oooo   oooo  ")
 print("    888      888ooo8     888    888 888 888 888   888 ")
 print("    888      888    oo   888        888 888 888   888  ")
 print("   o888o    o888ooo8888 o888o      o888o888o888o o888o ")
-print("                       0.1.5                           ")
+print("                       1.0.0                           ")
 print("")
 print("-------------------------------------------------------")
 

@@ -1,6 +1,8 @@
 # Termi-Lua
 Lua version of Termi
 
+[Stable version 1.0.0](https://github.com/ringwormGO-organization/Termi-Lua/releases/tag/v1.0.0)
+
 ## Build & Run
 ### Required software:
 - Lua (minium Lua 5.1)
