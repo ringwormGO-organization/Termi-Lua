@@ -8,13 +8,17 @@ Lua version of Termi
 - Git
   - Install with ```sudo apt-get install git``` if not already installed on GNU/Linux machine, Debian based.
 - ANSI supported terminal
-  - You can use Termi-Lua without ANSI characters but then colors are unavailable; warning for Windows users, use Windows Terminal if you can.
+  - You can use Termi-Lua without ANSI characters but then colors and option to clear screen are unavailable; warning for Windows users, use Windows Terminal if you can.
 
-### Build & Run - Windows & Linux
-- Open terminal (on Windows ```cmd``` because it support ```&&```) in root directory of repo and type:
+### Build & Run - macOS/BSD/(GNU/)Linux
+- Open terminal in `src` directory of repo and type:
 ```sh
-$ cd src && lua main.lua
+$ lua main.lua
 ```
+
+### Build & Run - other platforms
+- See [this](https://github.com/ringwormGO-organization/Termi-Lua/blob/main/CONTRIBUTING.md#port-termi-to-new-platform)
+- Open terminal in `src` directory and run lua executable with argument: `main.lua`
 
 ## Advantages and cons over Termi's C++ version
 ### Advantages
@@ -29,5 +33,5 @@ $ cd src && lua main.lua
 *it can be for someone advantages or cons for other*
 1. Does not have own terminal window
 
-## Users which use/ported Termi-Lua
+## Users which use(d)/ported Termi-Lua
 - [Lithicsoft-Inc](https://github.com/Lithicsoft-Inc)

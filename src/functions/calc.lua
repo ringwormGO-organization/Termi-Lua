@@ -8,42 +8,35 @@
 
 local calc = {}
 
---- Return first or second number
---- @param number integer
---- @return integer
-function Get(number)
-	if number ==  1 then
-			return tonumber(tostring(io.read()))
-
-	elseif number == 2 then
-			return tonumber(tostring(io.read()))
-	end
-end
-
-function calc.Run()
-	print("Enter what function to do (+, -, *, /)")
-
-	Calc = io.read()
+function calc.Run(arg)
+	local Calc = arg[2]
 
 	if Calc == "+" then
-		print("Enter two numbers")
-		io.write("Result: ", Get(1)+Get(2),"\n")
+		local num1 = tonumber(arg[3])
+		local num2 = tonumber(arg[4])
+
+		io.write("Result: ", num1 + num2, "\n")
 
 	elseif Calc == "-" then
-		print("Enter two numbers")
-		io.write("Result: ", Get(1)-Get(2),"\n")
+		local num1 = tonumber(arg[3])
+		local num2 = tonumber(arg[4])
+
+		io.write("Result: ", num1 - num2, "\n")
 
 	elseif Calc == "*" then
-		print("Enter two numbers")
-		io.write("Result: ", Get(1)*Get(2),"\n")
+		local num1 = tonumber(arg[3])
+		local num2 = tonumber(arg[4])
+
+		io.write("Result: ", num1 * num2, "\n")
 
 	elseif Calc == "/" then
-		print("Enter two numbers")
-		io.write("Result: ", Get(1)/Get(2),"\n")
+		local num1 = tonumber(arg[3])
+		local num2 = tonumber(arg[4])
+
+		io.write("Result: ", num1 / num2, "\n")
 
 	else
 		print("ERROR: COMMAND NOT FOUND")
-
 	end
 end
 

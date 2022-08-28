@@ -1,4 +1,3 @@
-
 ---
 --- @author Stjepan Bilić Matišić
 --- @PROJECT: Termi-Lua

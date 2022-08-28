@@ -8,6 +8,8 @@
 
 local util = {}
 
+local os = "linux"
+
 --- Return how many elements table (list) has
 --- @param T table
 --- @return integer
@@ -38,7 +40,6 @@ local elements = util.Length(util.Commands)
 --- @param s string
 --- @param delimiter string
 --- @return table
-
 function util.Split(s, delimiter)
     local result = {};
     for match in (s..delimiter):gmatch("(.-)"..delimiter) do
@@ -62,6 +63,39 @@ function util.Print_commands()
     print("-------------------------------------------------------")
 
     return true
+end
+
+--- Returns text of find command desired for terminal
+--- @param argument_id integer
+--- @return string
+function util.find_command(argument_id)
+    if os == "windows" then
+        return "TODO"
+    
+    elseif os == "linux" then
+        local str = 'find "..arg['tostring(argument_id)']" -type f'
+        return str
+    
+    else
+        return "REQUIRES IMPLEMENT"
+    end
+end
+
+--- Returns text of mkdir command desired for terminal
+--- @param path string
+--- @return string
+function util.mkdir_command(path)
+    if os == "windows" then
+        local str = "md " .. path
+        return str
+
+    elseif os == "linux" then
+        local str = "mkdir " .. path
+        return str
+    
+    else
+        return "REQUIRES IMPLEMENT"
+    end
 end
 
 return util

@@ -12,7 +12,7 @@ local util = require("functions.utils.utils")
 function mkdir.Run(arg)
     for i = 2, util.Length(arg), 1 do
         local dirname = arg[i]
-        os.execute("mkdir " .. dirname)
+        os.execute(util.mkdir_command(dirname))
     end
 
 end

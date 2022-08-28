@@ -1,75 +1,54 @@
 ---
 --- @author Stjepan Bilić Matišić
+--- @author Andrej Bartulin
 --- @PROJECT: Termi-Lua
 --- @LICENSE: ringwormGO General License 1.0 | (RGL) 2022
 --- @DESCRIPTION: Geo caluclator file for Termi Lua
 ---
 
-print("Enter what function to do (EXT, SRF)")
+local geocalc = {}
 
-    GCalc = io.read()
+    function geocalc.Run(arg)
+        local gcalc = arg[2]
+        local shape = arg[3]
+        if gcalc == "EXT" then
+            if shape == "TRI" then
+                local num1 = tonumber(arg[4])
+                local num2 = tonumber(arg[5])        
+                local num3 = tonumber(arg[6])
+                io.write("Combined size of all sides: ", num1 + num2 + num3, "\n")
 
-    if GCalc == "EXT" then
-        print("Enter what 2d shape you want (SQR, TRI, REC)")
+            elseif shape == "SQR" then
+                local num1 = tonumber(arg[4])   
+                io.write("Result: ", num1 * 4, "\n")
 
-        Shape = io.read()
+            elseif shape == "REC" then
+                local num1 = tonumber(arg[4])
+                local num2 = tonumber(arg[5])        
+                io.write("Result: ", num1 + num2,"\n")
 
-        if Shape == "TRI" then
+            else
+                print("ERROR: COMMAND NOT FOUND")
+            end
 
-            print("Enter the lenght of all sides")
+        else if gcalc == "SRF" then
+            if shape == "SQR" then
+                local num1 = tonumber(arg[4])
+                local num2 = tonumber(arg[5])        
+                io.write("Result: ", num1 * num1, "\n")
 
-            local Num1 = io.read()
-            local Num2 = io.read()
-            local Num3 = io.read()
-
-            io.write("Combined size of all sides: ", Num1+Num2+Num3, "\n")
-
-        elseif Shape == "SQR" then
-
-            print("Enter the lenght of all sides")
-
-            local Num1 = io.read()
-
-            io.write("Result: ", Num1*4, "\n")
-
-        elseif Shape == "REC" then
-
-            print("Enter the lenght of all sides")
-
-            local Num1 = io.read()
-            local Num2 = io.read()
-
-            io.write("Result: ", Num1+Num2,"\n")
-
+            elseif shape == "REC" then
+                local num1 = tonumber(arg[4])
+                local num2 = tonumber(arg[5])        
+                io.write("Result: ", num1 * num2, "\n")
+            else
+                print("ERROR: COMMAND NOT FOUND")
+            end
+        
         else
             print("ERROR: COMMAND NOT FOUND")
-
-        end
-
-
-    else if GCalc == "SRF" then
-        print("Enter what 2d shape you want (SQR, REC)")
-
-        Shape2 = io.read()
-
-        if Shape2 == "SQR" then
-
-            print("Enter lenght of a side")
-
-            local Num1 = io.read()
-
-            io.write("Result: ", Num1*Num1,"\n")
-
-        elseif Shape2 == "REC" then
-            print("Enter two numbers")
-
-                    local Num1 = io.read()
-                    local Num2 = io.read()
-
-                    io.write("Result: ", Num1*Num2,"\n")
-        else
-            print("ERROR: COMMAND NOT FOUND")
-
         end
     end
 end
+
+return geocalc
