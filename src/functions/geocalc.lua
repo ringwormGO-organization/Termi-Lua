@@ -28,7 +28,7 @@ local geocalc = {}
                 io.write("Result: ", num1 + num2,"\n")
 
             else
-                print("ERROR: COMMAND NOT FOUND")
+                print("ERROR: BAD ARGUMENTS!")
             end
 
         else if gcalc == "SRF" then
@@ -42,11 +42,11 @@ local geocalc = {}
                 local num2 = tonumber(arg[5])        
                 io.write("Result: ", num1 * num2, "\n")
             else
-                print("ERROR: COMMAND NOT FOUND")
+                print("ERROR: BAD ARGUMENTS!")
             end
         
         else
-            print("ERROR: COMMAND NOT FOUND")
+            print("ERROR: BAD ARGUMENTS!")
         end
     end
 end

@@ -36,7 +36,7 @@ function calc.Run(arg)
 		io.write("Result: ", num1 / num2, "\n")
 
 	else
-		print("ERROR: COMMAND NOT FOUND")
+		print("ERROR: BAD ARGUMENTS!")
 	end
 end
 

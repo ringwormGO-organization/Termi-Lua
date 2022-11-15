@@ -19,7 +19,7 @@ print("    888      888    88  oo oooooo  oo ooo oooo   oooo  ")
 print("    888      888ooo8     888    888 888 888 888   888 ")
 print("    888      888    oo   888        888 888 888   888  ")
 print("   o888o    o888ooo8888 o888o      o888o888o888o o888o ")
-print("                       1.0.0                           ")
+print("                       1.0.1                           ")
 print("")
 print("-------------------------------------------------------")
 
@@ -38,7 +38,7 @@ repeat
 	if util.Value(util.Commands, arg[1]) and input ~= "exit" then
 		local command = require(path)
 		command.Run(arg)
-		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 		
 	elseif input == "date" then
 		local time = os.date()
@@ -51,13 +51,13 @@ repeat
 	elseif input == "help" then
 		print("HELP: ")
 		util.Print_commands()
-		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
 	elseif input == "credits" then
 		print("* @author(s): StjepanBM1, Andrej123456789")
 		print("* PROJECT: Termi (Lua version)")
 		print("* Licnese: ringwormGO General License 1.0 | (RGL) 2022")
-		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
+		print("\27[32m\t\t\t\t\t\t\t\t\t\t\t Successfully executed!\27[0m")
 
 	elseif input == "clear" or input == "cls" then
 		io.write("\027[H\027[2J")
@@ -70,7 +70,7 @@ repeat
 
 	else
 		print("Invalid command!")
-		print("\27[31m\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Not successfully executed!\27[0m")
+		print("\27[31m\t\t\t\t\t\t\t\t\t\t\t Not successfully executed!\27[0m")
 	end
 
 until tostring(input) == "exit"
