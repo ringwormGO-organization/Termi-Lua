@@ -11,10 +11,13 @@ local util = require("functions.utils.utils")
 
 function rm.Run(arg)
     for i = 2, util.Length(arg), 1 do
-        local path = arg[i]
-        os.remove(path)
+        if arg[i] == nil then
+            print("ERROR: BAD ARGUMENTS!")
+        else
+            local path = arg[i]
+            os.remove(path)
+        end
     end
-
 end
 
 return rm

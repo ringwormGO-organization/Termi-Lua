@@ -33,8 +33,10 @@ function util.Value(tab, val)
     return false
 end
 
-util.Commands = {"base64", "credits", "exit", "echo", "find", "list", "calc", "geocalc", "createf", "mkdir", "rm", "whois"}
+util.Commands = {"base64", "credits", "date", "exit", "echo", "find", "list", "calc", "geocalc", "createf", "mkdir", "rm", "whois"}
 local elements = util.Length(util.Commands)
+
+util.Exclude = {"exit", "date", "whois", "credits"}
 
 --- Split string into the table (list)
 --- @param s string
@@ -66,18 +68,40 @@ function util.Print_commands()
 end
 
 --- Returns text of find command desired for terminal
---- @param argument_id integer
---- @return string
-function util.find_command(argument_id)
+--- @param directory string
+--- @return table
+function util.scandir(directory)
     if os == "windows" then
-        return "TODO"
+        local t = {}
+        local str = "TODO!"
+        str:gsub(".", function(c) table.insert(t, c) end)
+
+        return t;
     
     elseif os == "linux" then
-        local str = 'find "..arg['tostring(argument_id)']" -type f'
-        return str
+        local i, t, popen = 0, {}, io.popen
+        local pfile = popen('ls -a "'..directory..'"')
+
+        if pfile ~= nil then
+            for filename in pfile:lines() do
+                i = i + 1
+                t[i] = filename
+            end
+            pfile:close()
+            return t
+        end
+
+        local str = "ERROR: ERROR OCCURED!"
+        str:gsub(".", function(c) table.insert(t, c) end)
+
+        return t;
     
     else
-        return "REQUIRES IMPLEMENT"
+        local t = {}
+        local str = "REQUIRES YOUR OWN IMPLEMENTATION!"
+        str:gsub(".", function(c) table.insert(t, c) end)
+
+        return t;
     end
 end
 

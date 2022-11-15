@@ -10,21 +10,17 @@ local utils = require "functions.utils.utils"
 
 local list = {}
 
-    list.temp_sys = {}
-
     function list.Run(arg)
-        local p = io.popen(utils.find_command(2))  --Open directory look for files, save data in p. By giving '-type f' as parameter, it returns all files.
-        if p ~= nil then
-            for file in p:lines() do                           --Loop through all files
-                table.insert(list.temp_sys, file)              --Add file to table      
-            end
-
-            if arg[4] == nil then
-                for i = 1, utils.Length(list.temp_sys), 1 do
-                    print(" ")
-                    print(list.temp_sys[i])
+        if arg[2] == nil then
+            print("ERROR: BAD ARGUMENTS!")
+        else
+            local p = utils.scandir(arg[2])
+            if p ~= nil then
+                for i = 1, utils.Length(p), 1 do
+                    print(p[i])
                 end
-                for k, v in pairs(list.temp_sys) do list.temp_sys[k]=nil end
+            else
+                print("ERROR: ERROR OCCURED!")
             end
         end
     end

@@ -13,17 +13,13 @@ local find = {}
 
     function find.Run(arg)
         local temp_arg = {};
-        
-        table.insert(temp_arg, arg[2]) -- path
-        table.insert(temp_arg, arg[3]) -- file/directory name
-        table.insert(temp_arg, "!") -- don't print anythng
 
-        list.Run(temp_arg)
-
-        if utils.Value(list.temp_sys, arg[3]) == true then
-            io.write("File/Directory '")
-            io.write(arg[2])
-            io.write("' found!\n")
+        if arg[2] == nil or arg[3] == nil then
+            print("ERROR: BAD ARGUMENTS!")
+        else
+            table.insert(temp_arg, arg[2]) -- path
+            table.insert(temp_arg, arg[3]) -- file/directory name
+            list.Run(temp_arg)
         end
     end
 

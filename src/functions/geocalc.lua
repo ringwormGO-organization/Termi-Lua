@@ -13,19 +13,31 @@ local geocalc = {}
         local shape = arg[3]
         if gcalc == "EXT" then
             if shape == "TRI" then
-                local num1 = tonumber(arg[4])
-                local num2 = tonumber(arg[5])        
-                local num3 = tonumber(arg[6])
-                io.write("Combined size of all sides: ", num1 + num2 + num3, "\n")
+                if arg[4] == nil or arg[5] == nil or arg[6] == nil then
+                    print("ERROR: BAD ARGUMENTS!")
+                else
+                    local num1 = tonumber(arg[4])
+                    local num2 = tonumber(arg[5])        
+                    local num3 = tonumber(arg[6])
+                    io.write("Combined size of all sides: ", num1 + num2 + num3, "\n")
+                end
 
             elseif shape == "SQR" then
-                local num1 = tonumber(arg[4])   
-                io.write("Result: ", num1 * 4, "\n")
+                if arg[4] == nil then
+                    print("ERROR: BAD ARGUMENTS!")
+                else
+                    local num1 = tonumber(arg[4])   
+                    io.write("Result: ", num1 * 4, "\n")
+                end
 
             elseif shape == "REC" then
-                local num1 = tonumber(arg[4])
-                local num2 = tonumber(arg[5])        
-                io.write("Result: ", num1 + num2,"\n")
+                if arg[4] == nil or arg[5] == nil then
+                    print("ERROR: BAD ARGUMENTS!")
+                else
+                    local num1 = tonumber(arg[4])
+                    local num2 = tonumber(arg[5])        
+                    io.write("Result: ", num1 + num2,"\n")
+                end
 
             else
                 print("ERROR: BAD ARGUMENTS!")
@@ -33,14 +45,22 @@ local geocalc = {}
 
         else if gcalc == "SRF" then
             if shape == "SQR" then
-                local num1 = tonumber(arg[4])
-                local num2 = tonumber(arg[5])        
-                io.write("Result: ", num1 * num1, "\n")
+                if arg[4] == nil then
+                    print("ERROR: BAD ARGUMENTS!")
+                else
+                    local num1 = tonumber(arg[4])
+                    io.write("Result: ", num1 * num1, "\n")
+                end
 
             elseif shape == "REC" then
-                local num1 = tonumber(arg[4])
-                local num2 = tonumber(arg[5])        
-                io.write("Result: ", num1 * num2, "\n")
+                if arg[4] == nil or arg[5] == nil then
+                    print("ERROR: BAD ARGUMENTS!")
+                else
+                    local num1 = tonumber(arg[4])
+                    local num2 = tonumber(arg[5])        
+                    io.write("Result: ", num1 * num2, "\n")
+                end
+
             else
                 print("ERROR: BAD ARGUMENTS!")
             end

@@ -1,0 +1,13 @@
+// MACOS, UNIX/LINUX BASED OS
+    1. INSTALL LUA
+    2. lua main.lua
+
+// WINDOWS
+    1. Install Lua
+    2. RUN Termi-Lua file
+    3. Or just use WSL (recommended)
+
+|-------------------------------------------------------------------------|
+    If you have any more issues visit our github page and create a issue:
+        https://github.com/ringwormGO-organization/Termi-Lua
+|-------------------------------------------------------------------------|
