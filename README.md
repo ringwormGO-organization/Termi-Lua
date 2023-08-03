@@ -12,7 +12,7 @@ Lua version of Termi
 - ANSI supported terminal
   - You can use Termi-Lua without ANSI characters but then colors and option to clear screen are unavailable; warning for Windows users, use Windows Terminal if you can.
 
-### Build & Run - macOS/BSD/(GNU/)Linux
+### Build & Run - macOS/(GNU/)Linux/BSD
 - Open terminal in `src` directory of repo and type:
 ```sh
 $ lua main.lua
