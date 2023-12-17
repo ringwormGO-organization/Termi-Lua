@@ -36,4 +36,4 @@ $ lua main.lua
 1. Does not have own terminal window
 
 ## Users which use(d)/ported Termi-Lua
-- [Lithicsoft-Inc](https://github.com/Lithicsoft-Inc)
+- [Lithicsoft](https://github.com/Lithicsoft)
