@@ -19,7 +19,7 @@ $ lua main.lua
 ```
 
 ### Build & Run - other platforms
-- See [this](https://github.com/ringwormGO-organization/Termi-Lua/blob/main/CONTRIBUTING.md#port-termi-to-new-platform)
+- Change name of platform in `utils.lua`
 - Open terminal in `src` directory and run lua executable with argument: `main.lua`
 
 ## Advantages and cons over Termi's C++ version
