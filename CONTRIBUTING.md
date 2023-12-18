@@ -6,31 +6,29 @@ Just drop a Pull Request :)
 2. Use spaces, size 4
 
 ## Port Termi to new platform
-1. Navigate to `utils.lua`
-2. In functions which returns text of some command to be compatible with system's shell like `util.find_command` and add platform code
-3. Don't forget to change `os` variable in top of `utils.lua`
-4. See example:
+1. Navigate to `utils.lua`,
+2. change `os` variable in top of `utils.lua`,
+3. find unimplemented portion of code,
+4. add `if` statement for new platform.
+5. Example:
 ```lua
 
-local os = "linux"
+local os = "your_os"
 
---- Returns text of mkdir command desired for terminal
---- @param path string
---- @return string
-function util.mkdir_command(path)
+-- bunch of code
+
+function util.some_function(path)
     if os == "windows" then
-        local str = "md " .. path
-        return str
+        -- code
 
     elseif os == "linux" then
-        local str = "mkdir " .. path
-        return str
+        -- code
 
-    elseif os == "example" then
-        local str = "new " .. path
-    
+    elseif os == "your_os" then -- new part of the code
+        -- code
+
     else
-        return "REQUIRES IMPLEMENT"
+        -- code
     end
 end
 

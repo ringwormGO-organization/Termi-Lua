@@ -32,7 +32,7 @@ $ lua main.lua
 2. Slower development
 
 ### Advantages/Cons
-*it can be for someone advantages or cons for other*
+*it can be for someone advantage or cons for other*
 1. Does not have own terminal window
 
 ## Users which use(d)/ported Termi-Lua
