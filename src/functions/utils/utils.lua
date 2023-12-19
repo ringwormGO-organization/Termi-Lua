@@ -94,7 +94,7 @@ function util.scandir(directory)
         str = util.REQUIRES_IMPLEMENTATION_MESSAGE
     end
 
-    str:gsub(".", function(c) table.insert(t, c) end)
+    str:gsub(".", function(c) table.insert(t, str) end)
     return t;
 end
 
